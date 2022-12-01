@@ -27,10 +27,6 @@ int main (int argc, char** argv)
       current_sum += std::stoi(line);
     }
   } 
-  std::cout 
-    << max_sums[0] << " "
-    << max_sums[1] << " "
-    << max_sums[2] << " "
-    << max_sums[0] + max_sums[1] + max_sums[2] << std::endl;
+  std::cout << max_sums[0] + max_sums[1] + max_sums[2] << std::endl;
   return (0);
 }
