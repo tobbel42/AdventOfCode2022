@@ -33,9 +33,11 @@ int main(int argc, char **argv) {
   while (std::getline(input, line))
   {
     getNumbers(line, array);
-    //we need to find pairs which contain each other
-    if (array[0] <= array[2] && array[1] >= array[3] ||
-        array[2] <= array[0] && array[3] >= array[1])
+    // we need find pairs which overlap
+    //this only works because the pairs are well formated, meaning p1 < p2
+    // we check if begining of list one is before the end list two
+    // and if the end of list one is after the beginnig of list two
+    if (array[0] <= array[3] && array[1] >= array[2])
       sum++;
   }
   
